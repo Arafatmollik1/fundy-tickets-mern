@@ -1,22 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function App() {
+  const [isConnected, setIsConnected] = useState(false);
+
+  useEffect(() => {
+    axios.get('http://localhost:5001/')
+    .then(response => setIsConnected(response.data.connected))
+    .catch(error => console.error(error));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+
+        <h1>Initiation of Fundy App</h1>
+        <h2>Is MongoDB connected</h2>
+        
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {isConnected ? 'Yes': 'No'}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );

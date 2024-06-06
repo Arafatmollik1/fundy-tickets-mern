@@ -1,0 +1,16 @@
+{
+  "name": "fundy-tickets-mern",
+  "version": "1.0.0",
+  "description": "This is a simple crowdfunding web app. A bit more robust than buymeacoffee but less complicated like gofundme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run start --prefix backend\" \"npm run start --prefix frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
