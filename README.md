@@ -40,6 +40,11 @@ Before running this project, ensure you have the following installed:
    PORT=5001
    ```
 
+2. In the `frontend` directory, create a `.env.local` file and specify your MongoDB connection URI:
+
+   ```
+   FUNDY_BACKEND_BASIC_URL=http://localhost:5001/
+   ```
 ## Running the Application
 
 1. To run both the backend and frontend concurrently, from the root directory, run:
