@@ -12,11 +12,11 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="p-8">
       <header className="App-header">
 
-        <h1>Initiation of Fundy App</h1>
-        <h2>Is MongoDB connected</h2>
+        <h1 className='text-2xl font-bold mb-4'>Initiation of Fundy App</h1>
+        <h2 className='text-xl font-semibold'>Is MongoDB connected</h2>
         
         <p>
           {isConnected ? 'Yes': 'No'}
