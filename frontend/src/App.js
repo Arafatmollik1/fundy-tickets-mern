@@ -5,7 +5,8 @@ function App() {
   const [isConnected, setIsConnected] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:5001/')
+    const apiUrl = process.env.FUNDY_BASIC_URL || 'http://localhost:5001/';
+    axios.get(apiUrl)
     .then(response => setIsConnected(response.data.connected))
     .catch(error => console.error(error));
   }, []);
